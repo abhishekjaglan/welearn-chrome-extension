@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <h2>Summarize Content</h2>
+
+    <div class="input-type">
+        <label>Input Type:</label>
+        <select id="typeSelect">
+            <option value="text">Selected Text</option>
+            <option value="url">Current Page (URL)</option>
+            <option value="file">Upload File</option>
+        </select>
+    </div>
+
+    <div id="textInputSection" class="input-section">
+        <label>Selected Text:</label>
+        <textarea id="textInput" placeholder="Selected text will appear here..."></textarea>
+    </div>
+
+    <div id="urlInputSection" class="input-section" style="display: none;">
+        <label>Current URL:</label>
+        <input type="text" id="urlInput" readonly>
+    </div>
+
+    <div id="fileInputSection" class="input-section" style="display: none;">
+        <label>Upload File:</label>
+        <input type="file" id="fileInput" accept=".pdf,.jpg,.png,.tiff,.txt,.doc">
+    </div>
+
+    <div class="detail-level">
+        <label>Detail Level:</label>
+        <select id="detailLevel">
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="detailed">Detailed</option>
+        </select>
+    </div>
+
+    <button id="summarizeBtn">Summarize</button>
+
+    <div id="status" class="status">Status: Ready</div>
+    <div id="loading" class="loading" style="display: none;">Processing... <div class="spinner"></div>
+    </div>
+
+    <div id="summaryBox" class="summary-box"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

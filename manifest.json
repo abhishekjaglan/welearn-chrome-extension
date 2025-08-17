@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Summarizer Extension",
+  "version": "1.0",
+  "description": "Summarize text, URLs, or files using backend API",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3001/api/summarize"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
